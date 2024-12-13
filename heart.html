@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lời nhắn yêu thương</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .heart {
+            width: 200px;
+            height: 200px;
+            background: red;
+            position: relative;
+            transform: rotate(-45deg);
+            margin-top: 50px;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 200px;
+            height: 200px;
+            background: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart::before {
+            top: -100px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: 100px;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 1.5em;
+            animation: fadeIn 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0.6;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heart"></div>
+    <div class="message">
+        <p>Em yêu,</p>
+        <p>Tình yêu anh dành cho em như trái tim này,</p>
+        <p>Mãi mãi không bao giờ tan biến ❤️</p>
+    </div>
+</body>
+
+</html>
